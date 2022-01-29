@@ -12,20 +12,33 @@ $(function() {
   $('#search').removeClass('active');
   });
 
+  $('#search-drop').on('click', function() {
+  $('#search-1-1').toggleClass('active');
+  });
+
+  $('.signup').on('click', function() {
+  $('.block-sign-up').addClass('deleted');
+  });
+
   Waves.attach('.btn-blue, .btn-red');
-  Waves.attach('.btn, .link-search',  ['waves-light']);
+  Waves.attach('.btn, .link-search, .pill',  ['waves-light']);
   Waves.init();
 
-$('#map').usmap({
-	stateStyles: {fill: '#0e2241'},
-	stateHoverStyles: {fill: '#b92631'},
-  // The click action
-  click: function(event, data) {
-    $('#clicked-state')
-      .text('You clicked: '+data.name)
-      .parent().effect('highlight', {color: '#C7F464'}, 2000);
-  }
-});
+  $('#map').vectorMap({
+    map: 'us_lcc',
+    backgroundColor: 'transparent',
+    regionStyle: {
+      initial: {
+        fill: '#0e2241',
+        stroke: '#fff',
+        "stroke-width": 1,
+      },
+      hover: {
+        fill: '#b92631',
+        "fill-opacity": 1,
+      },
+    },
+  });
 
 });
 

@@ -7,180 +7,168 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jvectormap.com/css/jquery-jvectormap-2.0.5.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="border-blue">
+<body>
 
-  <div class="page-navbar d-none d-lg-block">
-    <div class="container">
-      <div class="row justify-content-end align-items-center">
-        <div class="col-6">
-          <div class="row row-2 align-items-center justify-content-end">
-            <div class="col-auto">
-              <button class="btn btn-blue">parent help hotline</button>
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-blue btn-red">donate</button>
+  <div class="navbar-shadow">
+    <div class="page-navbar d-none d-lg-block">
+      <div class="container">
+        <div class="row justify-content-end align-items-center">
+          <div class="col-6">
+            <div class="row row-2 align-items-center justify-content-end">
+              <div class="col-auto">
+                <button class="btn btn-blue">parent help hotline</button>
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-blue btn-red">donate</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#!">
+          <img src="img/brand.png" alt="">
+        </a>
+        <button class="sandwich collapsed d-lg-none" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto py-4 pb-lg-0">
+            <li class="nav-item">
+              <a href="#!" class="link-back ml-lg-4">
+                <span class="align-middle mr-3 align-middle">back to AFPI</span>
+                <span class="align-middle fas fa-chevron-right align-middle"></span>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <div class="row row-2 align-items-center pt-3">
+                <div class="col-auto">
+                  <button class="btn btn-blue mb-1 mb-sm-0">parent help hotline</button>
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-blue btn-red mb-1 mb-sm-0">donate</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
+  
+  <div class="border-blue">
+    <section class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="fz-26">welcome to</div>
+          <h1 class="mb-3">Parent Power</h1>
+          <div class="row justify-content-center pt-4 lh-18">
+            <div class="col-md-8">
+              <div>parent power is a free service that allows the public to see all the school districts across the country as well as the board members for each district. Enter a District name in the search below or select your state from the map.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/afpi-ribbon.png" alt="" class="img-ribbon">
+    </section>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#!">
-        <img src="img/brand.png" alt="">
-      </a>
-      <button class="sandwich collapsed d-lg-none" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-        <span></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav ml-auto py-4 pb-lg-0">
-          <li class="nav-item">
-            <a href="#!" class="link-back ml-lg-4">
-              <span class="align-middle mr-3">back to AFPI</span>
-              <span class="align-middle fas fa-chevron-right"></span>
-            </a>
-          </li>
-          <li class="d-lg-none">
-            <div class="row row-2 align-items-center pt-3">
-              <div class="col-auto">
-                <button class="btn btn-blue mb-1 mb-sm-0">parent help hotline</button>
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-blue btn-red mb-1 mb-sm-0">donate</button>
+    <section class="section-map">
+      <div class="container">
+        <div class="search-box">
+          <div class="form-drop" id="search">
+            <button class="btn btn-search"></button>
+            <input class="form-control" type="text" placeholder="Search District Name">
+          </div>
+          <div class="search" id="search-closed">search by district</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="us-box">
+              <div class="h1 mb-4 mb-md-5">search by state</div>
+              <div class="map-wrap">
+                <div id="map" class="map"></div>
               </div>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <section class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="fz-26">welcome to</div>
-        <h1 class="mb-3">Parent Power</h1>
-        <div class="row justify-content-center pt-4 lh-18">
-          <div class="col-md-8">
-            <div>parent power is a free service that allows the public to see all the school districts across the country as well as the board members for each district. Enter a District name in the search below or select your state from the map.</div>
           </div>
         </div>
       </div>
-    </div>
-    <img src="img/afpi-ribbon.png" alt="" class="img-ribbon">
-  </section>
+    </section>
 
-  <section class="section-map">
-    <div class="container">
-      <div class="search-box">
-        <div class="form-drop" id="search">
-          <button class="btn btn-search"></button>
-          <input class="form-control" type="text" placeholder="Search District Name">
-        </div>
-        <div class="search" id="search-closed">search by district</div>
+    <section class="section-blue">
+      <div class="container">
+        <form>
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="h1 mb-3">Parent help hotline</div>
+              <div class="lh-18">Share your story of fighting for your child’s education or reach out to ask for assistance and resources in your district.</div>
+            </div>
+          </div>
+          <div class="row row-10 mt-5 pt-4">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Zip">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-group mt-4">
+                <textarea class="form-control" placeholder="Share your Story" rows="6"></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-submit mt-5">SUBMIT</button>
+        </form>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="us-box">
-            <div class="h1 mb-5">search by state</div>
-            <div id="map" class="us-map"></div>
-            <div id="clicked-state"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h6>America first policy institute</h6>
+            <p class="content mb-0">America First Policy Institute is a 501(c)(3) non-profit organization, Tax ID # 85-4202763. Donations to AFPI may be used to support work of class counsel to identify the class and develop winning factual and legal arguments, and raise awareness about the case to advance these goals. Donations may also be used to support research and development of public interest policy and will support all of AFPI's charitable purposes. Signing up as a supporter or donor does not make you a party to, or class member in, any lawsuit in which AFPI may or may not be engaged. Contributions may also be postmarked to: America First Policy Institute, P.O. Box 2646, Arlington, VA 22202-0646</p>
+          </div>
+          <div class="col-4 text-right">
+            <a href="#!">
+              <img src="img/logo.png" alt="" width="110">
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-8">
-          <h6>America first policy institute</h6>
-          <p class="content mb-0">America First Policy Institute is a 501(c)(3) non-profit organization, Tax ID # 85-4202763. Donations to AFPI may be used to support work of class counsel to identify the class and develop winning factual and legal arguments, and raise awareness about the case to advance these goals. Donations may also be used to support research and development of public interest policy and will support all of AFPI's charitable purposes. Signing up as a supporter or donor does not make you a party to, or class member in, any lawsuit in which AFPI may or may not be engaged. Contributions may also be postmarked to: America First Policy Institute, P.O. Box 2646, Arlington, VA 22202-0646</p>
-        </div>
-        <div class="col-4 text-right">
-          <a href="#!">
-            <img src="img/logo.png" alt="" width="110">
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
-  <script src="libs/us-map-1.0.1/lib/raphael.js"></script>
-  <script src="libs/us-map-1.0.1/jquery.usmap.js"></script>
+  <script src="https://jvectormap.com/js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="https://jvectormap.com/js/jquery-jvectormap-us-lcc.js"></script>
   <script src="js/common.js"></script>
 
 </body>
